@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seoul Daily Guide</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+body{margin:0;font-family:Inter,Arial,sans-serif;background:#090b12;color:#fff}
+.hero{min-height:70vh;background:
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.85)),
+url('https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=1800&q=80');
+background-size:cover;background-position:center;padding:60px;display:flex;align-items:end}
+.hero h1{font-size:72px;line-height:.9;margin:0}
+.hero p{max-width:800px;font-size:20px;color:#ddd}
+.wrap{max-width:1200px;margin:auto;padding:30px}
+.card{background:#131722;border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:24px;margin:24px 0}
+.daytitle{font-size:42px;font-weight:800;margin-bottom:10px}
+.tag{display:inline-block;padding:8px 12px;background:#222;border-radius:999px;margin-bottom:10px}
+.stop{padding:18px;background:#1a1f2c;border-radius:20px;margin-top:14px}
+.stop h3{margin-top:0}
+a.btn{display:inline-block;padding:10px 14px;background:#fff;color:#000;text-decoration:none;border-radius:14px;font-weight:700;margin:6px 6px 0 0}
+#map{height:650px;border-radius:28px;margin-top:20px}
+img.heroimg{width:100%;border-radius:22px;margin-top:16px}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div>
+<div class="tag">June 24–28 · Seoul Family Guide</div>
+<h1>Lead the parents.<br>Win Seoul.</h1>
+<p>Daily spine guide with the finalized plans, working map pins, Google Maps links, MMCA integration, Bongeunsa + COEX morning, Banpo river sunset, Hongdae finale, and Seongsu birthday day.</p>
+</div>
+</section>
+
+<div class="wrap">
+
+<div class="card">
+<h2>Interactive Map</h2>
+<div id="map"></div>
+</div>
+
+<div class="card">
+<div class="tag">June 24 · Seongsu Birthday Energy</div>
+<div class="daytitle">Arrival → RETTRE → Seongsu</div>
+<img class="heroimg" src="https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?auto=format&fit=crop&w=1400&q=80">
+<div class="stop">
+<h3>3 PM · RETTRE Seoul Forest</h3>
+<p>Brainwave perfume-making experience. Arrive early and use a meaningful photo from your phone.</p>
+<a class="btn" target="_blank" href="https://g.co/kgs/7nARbVX">RETTRE Maps</a>
+</div>
+<div class="stop">
+<h3>4–8 PM · Seongsu</h3>
+<p>Haus Nowhere, Cafe Onion, LCDC Seoul, Point of View, pop-ups, cafés and cool retail.</p>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Haus+Nowhere+Seoul">Haus Nowhere</a>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cafe+Onion+Seongsu">Cafe Onion</a>
+</div>
+</div>
+
+<div class="card">
+<div class="tag">June 25 · MMCA + Shopping + KBBQ</div>
+<div class="daytitle">MMCA → Myeongdong → Mongvely → DDP</div>
+<img class="heroimg" src="https://images.unsplash.com/photo-1550630997-9f9b5fdb3e52?auto=format&fit=crop&w=1400&q=80">
+<div class="stop">
+<h3>10 AM · MMCA Seoul</h3>
+<p>Modern and contemporary art museum day for your mom. Best geographic fit with Ikseon, Insadong, DDP and Myeongdong.</p>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=MMCA+Seoul">MMCA Maps</a>
+</div>
+<div class="stop">
+<h3>Lunch · Vegan Insa Optional</h3>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Vegan+Insa+Seoul">Vegan Insa</a>
+</div>
+<div class="stop">
+<h3>Shopping + KBBQ + DDP</h3>
+<p>Myeongdong Olive Young + Daiso haul, then Mongvely AYCE KBBQ and futuristic DDP night walk.</p>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Olive+Young+Myeongdong+Global+Town">Olive Young</a>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Myeongdong+Korean+BBQ+Mongvely">Mongvely</a>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dongdaemun+Design+Plaza">DDP</a>
+</div>
+</div>
+
+<div class="card">
+<div class="tag">June 26 · Temple + COEX + Han River</div>
+<div class="daytitle">Bongeunsa → COEX → Banpo</div>
+<img class="heroimg" src="https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=1400&q=80">
+<div class="stop">
+<h3>10 AM · Bongeunsa Temple</h3>
+<p>30–45 minute quick temple stop right beside COEX.</p>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bongeunsa+Temple">Bongeunsa</a>
+</div>
+<div class="stop">
+<h3>COEX + Starfield Library</h3>
+<p>Book fair, shopping, Plantude vegan lunch and mall wandering.</p>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Starfield+Library+COEX">Starfield</a>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Plantude+Starfield+COEX">Plantude</a>
+</div>
+<div class="stop">
+<h3>Banpo River Night</h3>
+<p>Bikes, convenience store ramen picnic, Rainbow Fountain and Some Sevit.</p>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Banpo+Hangang+Park">Banpo</a>
+</div>
+</div>
+
+<div class="card">
+<div class="tag">June 27 · Hongdae Finale</div>
+<div class="daytitle">Mangwon → Yeonnam → Hongdae</div>
+<img class="heroimg" src="https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&w=1400&q=80">
+<div class="stop">
+<h3>Mangwon Market</h3>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mangwon+Market">Mangwon</a>
+</div>
+<div class="stop">
+<h3>Hongdae Finale</h3>
+<p>Street performers, arcades, VR, karaoke and final-night energy.</p>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hongdae+Walking+Street">Hongdae</a>
+<a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=VR+Square+Hongdae">VR Square</a>
+</div>
+</div>
+
+<div class="card">
+<div class="tag">June 28 · Departure</div>
+<div class="daytitle">Easy Hannam / Itaewon Morning</div>
+<p>No stress. Stay near the hotel and leave clean.</p>
+</div>
+
+</div>
+
+<script>
+const map = L.map('map').setView([37.545,126.99],12);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+maxZoom:19,
+attribution:'© OpenStreetMap'
+}).addTo(map);
+
+const spots = [
+["RETTRE",37.5467,127.0439],
+["MMCA",37.5786,126.9801],
+["Myeongdong",37.5637,126.9850],
+["DDP",37.5665,127.0090],
+["Bongeunsa",37.5151,127.0571],
+["COEX",37.5126,127.0588],
+["Banpo",37.5106,126.9959],
+["Hongdae",37.5550,126.9220]
+];
+
+spots.forEach(s=>{
+L.marker([s[1],s[2]]).addTo(map).bindPopup(s[0]);
+});
+</script>
+
+</body>
+</html>
